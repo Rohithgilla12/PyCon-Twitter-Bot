@@ -1,1 +1,1 @@
-worker: python volunteer.py
+worker: python main.py
