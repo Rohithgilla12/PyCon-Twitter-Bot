@@ -31,12 +31,12 @@ def checkSearchTerms(searchterms,tags):
     for searchitem in searchterms:
         if searchitem.upper() in tagschecklist:
             count +=1
-    return (count == 2)
+    return (count == len(tagschecklist))
 
 
 while api.verify_credentials() is not False:
     try:
-        userTweets = get_tweets(pyconindiahandle)
+        userTweets = get_tweets("pyconindia")
 
         for tweet in userTweets:
             if not(tweet.retweeted):
